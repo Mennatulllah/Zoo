@@ -167,7 +167,7 @@ margin-bottom: 2%
 }
 
 .begin .row .col img{
-    border: 2px solid darksalmon; 
+    border: 2px solid #fda856; 
 }
  .row .col img{
      width: 200px;
@@ -176,24 +176,12 @@ margin-bottom: 2%
      border: 2px solid papayawhip; 
      
 }
- .begin .row .col img:hover{
-         width: 205px;
-    height: 200px;
-        filter: gray;
 
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-        -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;  
-
-}
 .begin  .row .col p{
-    color:darksalmon;
+    color:#fda856;
 
 }
  .row .col p{
-    font-family: 'Courgette', cursive; 
     font-size: x-large;
 /*
 font-family: 'Indie Flower', cursive;

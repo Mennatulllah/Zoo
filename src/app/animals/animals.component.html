@@ -3,7 +3,9 @@
     <div class="headPic">
       <div class="overlay">
           <div class="row">
-            <div class="col col-lg-3 col-md-3"></div>
+            <div class="col col-lg-3 col-md-3">
+              <input type="text" class="form-control" placeholder="Search Animals" [(ngModel)]="SearchKey">
+            </div>
             <div class="col col-lg-2 col-md-4 col-sm-12">
               <div class="image">
                 <a href="#mammal"> <img src="assets/images/catcountry.png" class="img-circle"></a>
@@ -67,52 +69,17 @@
 
       <div class="MammalAnimal text-center" id="mammal">
 
-        <div class="row" *ngFor = "let a of data">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
+        <div class="row" >
+            
+            <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor = "let a of mammal | animalSearch:SearchKey">
+              <img [src]="a.Image">
+              <p>{{a.NickName}}</p>
 
             </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/003.jpg">
-              <p>{{a.Name}}</p>
-
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/004.jpg">
-              <p>Monkey</p>
-
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12 ">
-              <img src="assets/images/005.jpg">
-              <p>Tiger</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-
-            </div>
+         
         </div>
 
-        <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
-
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-        </div>
-
+        
 
         <div class="pagination text-center">
           <a href="#">&laquo;</a>
@@ -141,48 +108,15 @@
 
         <div class="Bird text-center" id="bird">
           <div class="row">
-              <div class=" col col-lg-3 col-md-3 col-sm-12">
-              </div>
-              <div class="col col-lg-2 col-md-2 col-sm-12">
-                <img src="assets/images/0010.jpg">
-                <p>Elephant</p>
+              
+              <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor ="let b of birds | animalSearch:SearchKey">
+                <img [src]="b.Image">
+                <p>{{b.NickName}}</p>
 
               </div>
-              <div class="col col-lg-2 col-md-2 col-sm-12">
-                <img src="assets/images/0011.jpg">
-                <p>Zebra</p>
-
-              </div>
-              <div class="col col-lg-2 col-md- col-sm-12 ">
-                <img src="assets/images/0012.jpg">
-                <p>Fish</p>
-
-              </div>
-              <div class=" col col-lg-3 col-md-3 col-sm-12">
-              </div>
+              
           </div>
 
-          <div class="row">
-              <div class=" col col-lg-3 col-md-3 col-sm-12">
-              </div>
-              <div class="col col-lg-2 col-md-2 col-sm-12">
-                <img src="assets/images/0010.jpg">
-                <p>Elephant</p>
-
-              </div>
-              <div class="col col-lg-2 col-md-2 col-sm-12">
-                <img src="assets/images/0011.jpg">
-                <p>Zebra</p>
-
-              </div>
-              <div class="col col-lg-2 col-md- col-sm-12 ">
-                <img src="assets/images/0012.jpg">
-                <p>Fish</p>
-
-              </div>
-              <div class=" col col-lg-3 col-md-3 col-sm-12">
-              </div>
-          </div>
           <div class="pagination text-center">
             <a href="#">&laquo;</a>
             <a href="#">1</a>
@@ -210,48 +144,15 @@
 
       <div class="Reptile text-center">
         <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
+            
+            <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor = "let rep of reptiles | animalSearch:SearchKey">
+              <img [src]="rep.Image">
+              <p>{{rep.NickName}}</p>
 
             </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
+            
         </div>
 
-        <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
-
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-        </div>
         <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
@@ -279,48 +180,14 @@
 
       <div class="Fish text-center">
         <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
+            <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor ="let f of fishes | animalSearch:SearchKey">
+              <img [src]="f.Image">
+              <p>{{f.NickName}}</p>
 
             </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
+           
         </div>
 
-        <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
-
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-        </div>
         <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
@@ -346,48 +213,15 @@
 
       <div class="Baby text-center">
         <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
+            <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor = "let b of babies | animalSearch:SearchKey">
+              <img [src]="b.Image">
+              <p>{{b.NickName}}</p>
 
             </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
+            
+            
         </div>
 
-        <div class="row">
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0010.jpg">
-              <p>Elephant</p>
-
-            </div>
-            <div class="col col-lg-2 col-md-2 col-sm-12">
-              <img src="assets/images/0011.jpg">
-              <p>Zebra</p>
-
-            </div>
-            <div class="col col-lg-2 col-md- col-sm-12 ">
-              <img src="assets/images/0012.jpg">
-              <p>Fish</p>
-
-            </div>
-            <div class=" col col-lg-3 col-md-3 col-sm-12">
-            </div>
-        </div>
         <div class="pagination text-center">
           <a href="#">&laquo;</a>
           <a href="#">1</a>
