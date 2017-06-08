@@ -13,9 +13,9 @@ export class AnimalsService {
     return this.http.get('http://localhost:3000/animals')
       .map(res => res.json());
   }
- data : any[] = [] ;
-  getMammals() {
-    return this.http.get('http://localhost:3000/animals').map(res => res.json());
-  }
+//  data : any[] = [] ;
+//   getMammals() {
+//     return this.http.get('http://localhost:3000/animals').map(res => res.json());
+//   }
 
 }
