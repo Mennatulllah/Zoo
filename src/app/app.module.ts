@@ -27,7 +27,8 @@ import { TipsComponent } from './tipsforyouvisit/tips.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { GalleryComponent } from './gallery/gallery.component'
+import { GalleryComponent } from './gallery/gallery.component';
+import { AnimalSearchPipe } from './animal-search.pipe'
 
 
 
@@ -48,7 +49,8 @@ import { GalleryComponent } from './gallery/gallery.component'
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    GalleryComponent
+    GalleryComponent,
+    AnimalSearchPipe
     
   ],
   imports: [
