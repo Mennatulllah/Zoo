@@ -122,22 +122,23 @@ header {
     z-index: 9;
     padding: 0.5rem 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color:#fda856;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
+/*
 header.transition {
     -webkit-transition: background-color 0.3s ease;
     -moz-transition: background-color 0.3s ease;
     -ms-transition: background-color 0.3s ease;
     -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
-}
+}*/
 
 header.transparent {
-    background-color: transparent;
+    /*background-color: transparent;*/
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -154,7 +155,7 @@ header.fixed-header {
     top: 0;
     left: 0;
     z-index: 9998;
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: #fda856;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
