@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Eqyptianpreserve} from '../../Interfaces/EqyptianPreserve';
+import {PreserveService} from '../preserve.service'
 
 @Component({
   selector: 'app-preserves',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreservesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private preserveServ:PreserveService) { }
+ 
+  preserveData: Eqyptianpreserve[]=[];
+  counter:Number=0;
   ngOnInit() {
+    
+    this.preserveServ.getPreserve().subscribe( preserveData=> {this.preserveData=preserveData;
+    console.log(this.preserveData)});
   }
 
 }
