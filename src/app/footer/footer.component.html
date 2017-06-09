@@ -1,21 +1,24 @@
-    <!--<link href="../../assets/css/font-awesome.css" rel="stylesheet" />-->
     <div id="footer-wrapper" class="wrapper">     
         <div id="footer" class="container">
             <section class="main-section footer" id="contact">
                 
                 <div class="contact_section">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3" *ngFor = "let c of contacts">
                             <div class="contact_block">
                                 <div class="contact_block_icon rollIn animated wow"><span><i class="fa-home"></i></span></div>
                                 <span>
-                                    Giza Zoo - Charles De Gaulle st. <br>
-                                    Giza - Egypt - 12612
+                                     {{c.Address[0]}}<br>
+                                    {{c.Phone[0]}}, {{c.Phone[1]}}<br>
+                                    {{c.Email[0]}}<br>
+                                   ++ {{c.Fax[0]}}<br>
+                                   {{c.PostalCode}}<br>
+                                   {{c.Url}}
 
                                 </span>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <!--<div class="col-lg-3">
                             <div class="contact_block">
                                 <div class="contact_block_icon icon2 rollIn animated wow"><span><i class="fa-phone"></i></span></div>
                                 <span>
@@ -35,7 +38,7 @@
                                 <div class="contact_block_icon icon3 rollIn animated wow"><span><i class="fa-envelope-o"></i></span></div>
                                 <span> <a href="mailto:zoogiza@hotmail.com"> zoogiza@hotmail.com </a> </span>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <p class="text-center">Copy rights &copy 2017 Giza Zoo </p>
