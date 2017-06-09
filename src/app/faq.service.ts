@@ -9,8 +9,7 @@ export class FaqService {
 
   // Get all posts from the API
   getAllFAQs() {
-    return this.http.get('http://localhost:3000/faq')
-      .map(res => res.json());
+    return this.http.get('http://localhost:3000/faq').map(res => res.json());
   }
 
 }
