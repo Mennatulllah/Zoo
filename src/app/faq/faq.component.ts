@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FaqService } from '../faq.service'
+import { FaqService } from '../faq.service';
+import { FaqTypeService } from '../FAQType.service';
+import {FAQ} from '../../Interfaces/FAQ';
+import {FAQType} from '../../Interfaces/FAQType';
 
 @Component({
   moduleId:module.id,
@@ -9,15 +12,16 @@ import { FaqService } from '../faq.service'
 })
 export class FaqComponent implements OnInit {
 
- faq: any = [];
+ faq: FAQ[] = [];
+ faqtype: FAQType[]=[];
 
-  constructor(private faqserv: FaqService) { }
+  constructor(private faqserv: FaqService , private faqtypeServ:FaqTypeService) { }
 
   ngOnInit() {
-    // Retrieve posts from the API
-    this.faqserv.getAllFAQs().subscribe(faq => {
-      this.faq = faq;
-    });
+    // Retrieve all the questions and answers of faq from the API
+    this.faqserv.getAllFAQs().subscribe(faq => { this.faq = (<FAQ[]>faq);});
 
-}
+    // retrieve the faq type from the database 
+     this.faqtypeServ.getAllFAQTypes().subscribe(faqtype => { this.faqtype = (<FAQType[]>faqtype);});
+  }
 }
